@@ -1,0 +1,42 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About this site",
+      "description": "Some additional details about the website",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-12-09T11:13:57-08:00"
+    },
+    {
+      "path": "blog.html",
+      "author": [],
+      "contents": "\r\n#create a website install.packages(c(“distill”, “rmarkdown”, “postcards”)) library(distill) create_website(dir = “.”, title = “MyWebsite”, gh_pages = TRUE)\r\n#create a postcard create_article(file = “Horn3”, # future name of .Rmd file template = “trestles”, # name of template package = “postcards”) # package that includes the template #add a blog create_post(“welcome”) #make a navigation option file.edit(“blog.Rmd”)\r\n#get this published usethis::use_git() usethis::use_github()\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-12-09T11:13:57-08:00"
+    },
+    {
+      "path": "CV.html",
+      "title": "Curriculum Vitae",
+      "description": "Latin for \"course of life\"\n",
+      "author": [],
+      "contents": "\r\nModify Chunk OptionsRun All Chunks AboveRun Current Chunk\r\n\r\nZY’KEYAH S. HORN Parker-Hannifin\r\nzykeyahhorn@yahoo.com\r\n\r\nIt is my mission to learn and inspire with honesty and integrity as I walk the path God has set for me. I strive to be a leader, dedicated to leading the masses on why we believe, not just focused on what we believe.\r\nEducation Mississippi State University, Adkerson School of Accountancy Starkville, MS—In Progress\r\nMaster of Professional Accountancy Candidate\r\nMississippi State University, Adkerson School of Accountancy Starkville, MS\r\nBachelor of Accountancy with a minor in Pre-Law\r\n· Magna Cum Laude\r\nMeridian Community College, Meridian, MS\r\n(DUAL ENROLLMENT STUDENT)\r\nJune 2016 – May 2018\r\n· 24 hours\r\n· GPA 4.0\r\nExperience Parker-Hannifin, Cleveland, Ohio—Accounting Leadership Development Associate\r\nJuly 2021– Current\r\n· Responsible for the submission of weekly payroll report submissions for two sites\r\n· Process all payments and apply them against invoices\r\nMississippi State Forestry, Starkville, MS—Accounting Assistant\r\nJuly 2018– April 2021\r\n· Analyze and prepare monthly financial reports\r\n· Execute invoices from vendors\r\n· Scan and file all paper documents into database\r\nActivities and Associations National Association of Black Accountants­- President (2020- 2021)\r\nZeta Phi Beta Sorority, Inc- Treasurer (2020-2021)\r\nBrickfire Mentoring Program- Mentor (2019-2021)\r\nCommunity Service– Future Pride and Ms. Smith’s Educational Services Volunteer (2018-Current)\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-12-09T11:13:57-08:00"
+    },
+    {
+      "path": "Horn.html",
+      "title": "Zy'Keyah Horn",
+      "author": [],
+      "contents": "\r\n\r\n          \r\n          \r\n          MyWebsite\r\n          \r\n          \r\n          Home\r\n          blog\r\n          About\r\n          \r\n          \r\n          Projects\r\n           \r\n          ▾\r\n          \r\n          \r\n          R-Squared\r\n          M-L\r\n          FinalProject\r\n          \r\n          \r\n          ☰\r\n          \r\n          \r\n      \r\n        \r\n          \r\n            \r\n              \r\n            \r\n              Zy’Keyah Horn\r\n            \r\n            \r\n              \r\n                \r\n                    \r\n                      \r\n                        LinkedIn\r\n                      \r\n                    \r\n                  \r\n                                    \r\n                    \r\n                      \r\n                        Email\r\n                      \r\n                    \r\n                  \r\n                                  \r\n            \r\n          \r\n        \r\n        \r\n        \r\n          \r\n            \r\n            Bio\r\n            Zy’Keyah Horn is a 21-year old born and raised in Meridian, Mississippi. Zy’Keyah graduated as Meridian High Class Valedictorian is 2018. She graduated from Mississippi State University in the Spring of 2021 with a bachelor’s degree in accounting and a minor in political science. She graduated with Magna Cum Laude. She is a first generation college graduate. Upon completing her degree, Zy’Keyah accepted a position with Parker-Hannifin as a Accounting Leadership Development Associate. While working full-time, Zy’Keyah is pursuing a Master’s degree in professional accountancy from Mississippi State.\r\n            \r\n          \r\n        \r\n      \r\n    \r\n\r\n    \r\n      \r\n        \r\n          \r\n            \r\n              \r\n            \r\n              Zy’Keyah Horn\r\n            \r\n            \r\n              \r\n                \r\n                                    \r\n                    \r\n                      LinkedIn\r\n                    \r\n                  \r\n                                    \r\n                    \r\n                      Email\r\n                    \r\n                  \r\n                                  \r\n              \r\n            \r\n            \r\n              \r\n              Bio\r\n              Zy’Keyah Horn is a 21-year old born and raised in Meridian, Mississippi. Zy’Keyah graduated as Meridian High Class Valedictorian is 2018. She graduated from Mississippi State University in the Spring of 2021 with a bachelor’s degree in accounting and a minor in political science. She graduated with Magna Cum Laude. She is a first generation college graduate. Upon completing her degree, Zy’Keyah accepted a position with Parker-Hannifin as a Accounting Leadership Development Associate. While working full-time, Zy’Keyah is pursuing a Master’s degree in professional accountancy from Mississippi State.\r\n              \r\n            \r\n        \r\n      \r\n    \r\n\r\n    \r\n    \r\n    ",
+      "last_modified": "2021-12-09T11:13:57-08:00"
+    },
+    {
+      "path": "index.html",
+      "title": "MyWebsite",
+      "description": "Welcome to the website. I hope you enjoy it!\n",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-12-04T19:34:21-08:00"
+    }
+  ],
+  "collections": ["posts/posts.json"]
+}

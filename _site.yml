@@ -1,0 +1,23 @@
+name: "."
+title: "MyWebsite"
+description: |
+  "MyWebsite"
+output_dir: "docs"
+navbar:
+  right:
+    - text: "Home"
+      href: Horn.html
+    - text: "blog"    # add
+      href: blog.html # add
+    - text: "About"
+      href: CV.html
+    - text: "Projects"  # add
+      menu:
+      - text: "R-Squared"    # add
+        href: R-Squared.html   # add
+      - text: "M-L"    # add
+        href: M-L.html   # add
+      - text: "FinalProject"    # add
+        href: FinalProject.html   # add
+      
+output: distill::distill_article

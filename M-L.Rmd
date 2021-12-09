@@ -1,0 +1,110 @@
+---
+title: "M-L"
+author: "zsh48"
+date: "12/8/2021"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Change the p=.6 to p=.75 in the Data Pre-Processing section. How did the classification results change?
+
+*The following explanations and answers are from the class' website.*
+
+First Code Chunk:
+
+The question asks me to split the data where 75% of the original dataset is split into Training data and that would leave 25% left for Testing data. Why do we have Training data and Testing data? Running and evaluating the model on the training data is like me giving you a study guide to an exam and then giving you an exam that is exactly the study guide...not a great measure of your abilities.
+
+```{r}
+
+library(tidyverse)
+library(caret)
+#change the p=.6 to p=.75
+#what does createDataPartition do?
+#run the following code: ?createDataPartition
+
+#this creates an index of rows in include in the training
+#literally lists the rows to keep
+trainIndex <- createDataPartition(iris$Species, p = .75, list = FALSE, times = 1)
+
+#rows to keep
+knitr::kable(trainIndex)%>%
+  kableExtra::kable_styling("striped")%>%
+  kableExtra::scroll_box(width = "100%",height="200px")
+
+#grab the data
+#take these rows
+irisTrain <- iris[ trainIndex,]
+#don't take these rows
+irisTest  <- iris[-trainIndex,]
+
+#we now have training and testing data sets
+```
+
+Second Code Chunk:
+
+K-NN is our classification algorithm. Because K-NN uses distance we need the variables to have the same unit of measure. You can't subtract centimeters from inches without doing a conversion. Here we standardize the variables to make them have the same measure...which is standard deviations.
+
+```{r}
+#for the algorithm we are using it requires that we standardize
+
+#center= subtract the means and 
+#scale = divide by standard deviation
+#?preProcess sets the conversion up 
+preProcValues <- preProcess(irisTrain, method = c("center", "scale"))
+
+preProcValues
+
+#this predict actual change the variables
+trainTransformed <- predict(preProcValues, irisTrain)
+#repeat for testing
+preProcValues <- preProcess(irisTest, method = c("center", "scale"))
+testTransformed <- predict(preProcValues, irisTest)
+```
+
+Third Code Chunk:
+
+Run the model. We have done the prep work, we split the data into training and testing and we standardized the variables. Now we run the model on the training data.
+
+```{r}
+#data is split and standardized
+#time to run the model
+#fit knn
+
+#use train function and set up the equation
+knn_fit<-train(Species~Sepal.Length+Sepal.Width+Petal.Length+Petal.Width,
+              #data we are using
+              data=trainTransformed,
+              #algorithm we are using
+              method="knn",
+              #the hyperparameter or tuning parameter is the
+              #number of neighbors...here we set it to 5
+              tuneGrid=data.frame(k=5))
+
+#this is the object that holds the model
+knn_fit
+```
+
+Fourth Code Chunk:
+
+Get the results. First we have to use the model to predict on the testing dataset. Basically for K-NN this means for whatever our k tuning parameter is (5 in this example) is the number of neighbors we use to make our prediction. So, we have a row of data in the testing set and that generates a point in N-dimensional space (look at my 3d graphs for an example of a 3-dimensional space) and K-NN looks for the 5 nearest points from the training data and sets to prediction to majority vote...so if 3 of the points are setosa, then that prediction is set to setosa.
+
+```{r}
+#predict on the test set
+knn_pred<-predict(knn_fit,testTransformed)
+
+#confusion matrix gives us the results
+confusionMatrix(knn_pred,testTransformed$Species)
+```
+
+# Results:
+
+We would have to do a test to know whether the models produced results that were statistically different. But for now we can compare the accuracy and kappa. Comparing the results below to what is in the module we see that the model performs worse. Both the accuracy and the kappa are lower than the model in the module.
+
+```{r}
+
+#The result was always the goal
+confusionMatrix(knn_pred,testTransformed$Species)
+```

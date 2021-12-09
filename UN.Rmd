@@ -1,0 +1,22 @@
+```{r}
+name: "."
+title: "Horn"
+description: |
+  Professor Hunt's website and blog that mainly features information about
+  Accounting, data science, R and academia.
+output_dir: "docs"
+base_url: https://github.com/Professor-Hunt/MyWebsite 
+navbar:
+  logo:
+    image: Josh_logo.png
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "CV"
+      href: CV.html
+    - text: "Projects"
+      href: projects.html
+output: distill::distill_article
+theme: "theme.css"
+```
+

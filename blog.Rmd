@@ -1,0 +1,17 @@
+#create a website
+install.packages(c("distill", "rmarkdown", "postcards"))
+library(distill)
+create_website(dir = ".", title = "MyWebsite", gh_pages = TRUE)
+
+#create a postcard
+create_article(file = "Horn3",         # future name of .Rmd file
+               template = "trestles",    # name of template
+               package = "postcards") # package that includes the template
+#add a blog
+create_post("welcome")
+#make a navigation option
+file.edit("blog.Rmd")
+
+#get this published
+usethis::use_git()
+usethis::use_github()
