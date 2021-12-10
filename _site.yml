@@ -6,15 +6,13 @@ output_dir: "docs"
 navbar:
   right:
     - text: "Home"
-      href: Horn.html
-    - text: "blog"    # add
-      href: blog.html # add
-    - text: "About"
+      href: index.html
+    - text: "CV"
       href: CV.html
     - text: "Projects"  # add
       menu:
       - text: "R-Squared"    # add
-        href: R-Squared.html   # add
+        href: R-squared.html   # add
       - text: "M-L"    # add
         href: M-L.html   # add
       - text: "FinalProject"    # add
