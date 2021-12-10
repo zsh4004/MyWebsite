@@ -12,7 +12,7 @@ navbar:
     - text: "Projects"  # add
       menu:
       - text: "R-Squared"    # add
-        href: R-squared.html   # add
+        href: R-Squared.html   # add
       - text: "M-L"    # add
         href: M-L.html   # add
       - text: "FinalProject"    # add
