@@ -108,3 +108,4 @@ We would have to do a test to know whether the models produced results that were
 #The result was always the goal
 confusionMatrix(knn_pred,testTransformed$Species)
 ```
+This relates to accounting because by be able to split the datasets and observe the variations in the results,

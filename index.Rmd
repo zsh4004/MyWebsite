@@ -5,11 +5,17 @@ links:
   - label: LinkedIn 
     url: "https://www.linkedin.com/in/zy-keyah-horn-599790169" 
   - label: Email 
-    url: "mailto:zykeyahhorn@yahoo.com" 
+    url: "mailto:zykeyahhorn@yahoo.com"
+  - label: Github 
+    url: "https://github.com/zsh4004"
+     
 output: 
   postcards::trestles 
 site: distill::distill_website
---- 
-## Bio
+---
 
-Zy'Keyah Horn is a 21-year old born and raised in Meridian, Mississippi. Zy'Keyah graduated as Meridian High Class Valedictorian is 2018. She graduated from Mississippi State University in the Spring of 2021 with a bachelor's degree in accounting and a minor in political science. She graduated with Magna Cum Laude. She is a first generation college graduate. Upon completing her degree, Zy'Keyah accepted a position with Parker-Hannifin as a Accounting Leadership Development Associate. While working full-time, Zy'Keyah is pursuing a Master's degree in professional accountancy from Mississippi State.
+<center>
+
+# **Bio**
+
+*Zy'Keyah Horn is a 21-year old born and raised in Meridian, Mississippi. Zy'Keyah graduated as Meridian High Class Valedictorian is 2018. She graduated from Mississippi State University in the Spring of 2021 with a bachelor's degree in accounting and a minor in political science. She graduated with Magna Cum Laude. She is a first generation college graduate. Upon completing her degree, Zy'Keyah accepted a position with Parker-Hannifin as a Accounting Leadership Development Associate. While working full-time, Zy'Keyah is pursuing a Master's degree in professional accountancy from Mississippi State.*
